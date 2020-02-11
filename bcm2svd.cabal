@@ -1,0 +1,28 @@
+name:                bcm2svd
+version:             0.1.0.0
+synopsis:            Convert broadcom header files to SVD
+-- description:         Something a bit longer
+homepage:            https://github.com/sorki/bcm2svd
+license:             BSD3
+license-file:        LICENSE
+author:              Richard Marko
+maintainer:          srk@48.io
+copyright:           2020 Richard Marko
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+
+extra-source-files:
+    README.md
+
+executable bcm2svd
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base >= 4.7 && < 5
+                     , attoparsec
+                     , bytestring
+                     , text
+                     , hxt
+                     , data-stm32
+                     , directory
+  default-language:    Haskell2010
